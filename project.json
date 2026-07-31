@@ -1,18 +1,27 @@
 {
   "project_name": "full-stack-development-workflow",
   "display_name": "全栈开发",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "entry_skill": "full-stack-development-workflow",
-  "experts": [
-    {"id": "requirements", "skill": "full-stack-requirements", "triggers": ["需求对齐", "需求拆分", "架构调整"]},
-    {"id": "implementation", "skill": "full-stack-implementation", "triggers": ["实现 Issue", "开发功能", "写代码"]},
-    {"id": "debugging", "skill": "full-stack-debugging", "triggers": ["报错", "修 Bug", "根因"]},
-    {"id": "quality-review", "skill": "full-stack-quality-review", "triggers": ["代码审查", "合并前检查", "质量审查"]},
-    {"id": "deployment", "skill": "full-stack-deployment", "triggers": ["部署", "上线", "生产回归"]}
+  "experts": [],
+  "references": [
+    "engineering-principles.md",
+    "github-collaboration.md",
+    "zeabur-delivery.md"
+  ],
+  "retired_entries": [
+    "full-stack-requirements",
+    "full-stack-implementation",
+    "full-stack-debugging",
+    "full-stack-quality-review",
+    "full-stack-deployment"
   ],
   "dependencies": [
-    {"skill": "codex-dev-good-taste", "role": "engineering-principles"},
+    {"skill": "codex-dev-good-taste", "role": "integrated-engineering-principles"},
+    {"skill": "multi-agent-github-workflow", "role": "integrated-github-collaboration"},
+    {"skill": "zeabur-*", "role": "external-platform-tools"},
+    {"repository": "mattpocock/skills", "license": "MIT", "role": "adapted-engineering-concepts"},
     {"skill": "ponytail", "role": "minimal-implementation-principles"}
   ]
 }
