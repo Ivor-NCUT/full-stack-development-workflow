@@ -1,0 +1,4 @@
+interface:
+  display_name: "代码质量审查"
+  short_description: "审查代码正确性、接口兼容性、安全风险、测试与不必要复杂度"
+  default_prompt: "使用 $full-stack-quality-review 审查这次改动。"

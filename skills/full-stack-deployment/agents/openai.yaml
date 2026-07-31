@@ -1,0 +1,4 @@
+interface:
+  display_name: "部署与验收"
+  short_description: "安全部署已经验证的版本并回读健康、进程和真实业务运行状态"
+  default_prompt: "使用 $full-stack-deployment 部署并验证这次变更。"

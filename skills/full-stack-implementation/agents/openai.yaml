@@ -1,0 +1,4 @@
+interface:
+  display_name: "开发实现"
+  short_description: "按已确认 Issue 完成最小正确实现并留下回归检查"
+  default_prompt: "使用 $full-stack-implementation 完成当前 Issue。"

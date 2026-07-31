@@ -1,0 +1,3 @@
+{"id":"fanhan-development-principles","title":"给 Coding Agent 的开发原则文档","type":"user-provided","license":"private-reference","allowed_use":"Derived operational rules; do not redistribute source text."}
+{"id":"codex-dev-good-taste","title":"codex-dev-good-taste","type":"user-owned-skill","license":"user-authorized","allowed_use":"Reference and invoke without duplicating the full skill."}
+{"id":"ponytail","title":"Ponytail","type":"installed-plugin","license":"external","allowed_use":"Invoke when installed; do not vendor."}

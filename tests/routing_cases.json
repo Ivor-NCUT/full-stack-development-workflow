@@ -1,0 +1,7 @@
+[
+  {"prompt":"把这个模糊需求拆成可验收的开发项","expected":"full-stack-requirements"},
+  {"prompt":"按已确认的 Issue 实现这个功能","expected":"full-stack-implementation"},
+  {"prompt":"这个报错为什么发生，修掉根因","expected":"full-stack-debugging"},
+  {"prompt":"合并前审查这次代码修改","expected":"full-stack-quality-review"},
+  {"prompt":"部署到 Zeabur 并完成生产回归","expected":"full-stack-deployment"}
+]

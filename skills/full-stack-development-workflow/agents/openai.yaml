@@ -1,0 +1,4 @@
+interface:
+  display_name: "全栈开发"
+  short_description: "路由公司级需求、开发实现、根因调试、质量审查与生产部署长任务"
+  default_prompt: "使用 $full-stack-development-workflow 推进这项开发任务。"
