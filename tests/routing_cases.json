@@ -1,7 +1,42 @@
 [
-  {"prompt":"把这个模糊需求拆成可验收的开发项","expected":"full-stack-requirements"},
-  {"prompt":"按已确认的 Issue 实现这个功能","expected":"full-stack-implementation"},
-  {"prompt":"这个报错为什么发生，修掉根因","expected":"full-stack-debugging"},
-  {"prompt":"合并前审查这次代码修改","expected":"full-stack-quality-review"},
-  {"prompt":"部署到 Zeabur 并完成生产回归","expected":"full-stack-deployment"}
+  {
+    "prompt": "把这个模糊需求拆成可验收的开发项",
+    "expected": "full-stack-development-workflow",
+    "references": ["engineering-principles.md"]
+  },
+  {
+    "prompt": "按已确认的 Issue 实现这个功能并测试",
+    "expected": "full-stack-development-workflow",
+    "references": ["engineering-principles.md"]
+  },
+  {
+    "prompt": "建立复现并修掉这个 Bug 的根因",
+    "expected": "full-stack-development-workflow",
+    "references": ["engineering-principles.md"]
+  },
+  {
+    "prompt": "按规格和工程标准审查这次修改",
+    "expected": "full-stack-development-workflow",
+    "references": ["engineering-principles.md"]
+  },
+  {
+    "prompt": "让三个 Agent 在同一仓库安全开发并开 PR",
+    "expected": "full-stack-development-workflow",
+    "references": ["github-collaboration.md"]
+  },
+  {
+    "prompt": "解决这个分支的合并冲突并完成 PR",
+    "expected": "full-stack-development-workflow",
+    "references": ["github-collaboration.md"]
+  },
+  {
+    "prompt": "部署到 Zeabur 并完成生产回归",
+    "expected": "full-stack-development-workflow",
+    "references": ["zeabur-delivery.md"]
+  },
+  {
+    "prompt": "Zeabur 服务超时，检查端口、日志和健康状态",
+    "expected": "full-stack-development-workflow",
+    "references": ["engineering-principles.md", "zeabur-delivery.md"]
+  }
 ]

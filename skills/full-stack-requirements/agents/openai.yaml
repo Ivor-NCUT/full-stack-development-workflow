@@ -1,4 +1,0 @@
-interface:
-  display_name: "开发需求对齐"
-  short_description: "把开发目标整理成边界清楚、接口明确并且可以独立验收的实现项"
-  default_prompt: "使用 $full-stack-requirements 对齐这项开发需求。"

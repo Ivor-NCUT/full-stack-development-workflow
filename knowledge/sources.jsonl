@@ -1,3 +1,6 @@
-{"id":"fanhan-development-principles","title":"给 Coding Agent 的开发原则文档","type":"user-provided","license":"private-reference","allowed_use":"Derived operational rules; do not redistribute source text."}
-{"id":"codex-dev-good-taste","title":"codex-dev-good-taste","type":"user-owned-skill","license":"user-authorized","allowed_use":"Reference and invoke without duplicating the full skill."}
+{"id":"fanhan-development-principles","title":"给 Coding Agent 的开发原则文档","type":"user-provided","license":"user-authorized","allowed_use":"Adapt and redistribute operational rules in this repository."}
+{"id":"codex-dev-good-taste","title":"codex-dev-good-taste","type":"user-owned-skill","license":"user-authorized","allowed_use":"Integrate and adapt engineering principles in this repository."}
+{"id":"multi-agent-github-workflow","title":"multi-agent-github-workflow","type":"user-owned-skill","license":"user-authorized","allowed_use":"Integrate and adapt GitHub collaboration rules in this repository."}
+{"id":"zeabur-skills","title":"Installed zeabur-* Skills","type":"external-runtime-skills","license":"external","allowed_use":"Route to installed tools and summarize operational guardrails; do not vendor connector implementations."}
+{"id":"mattpocock-skills","title":"mattpocock/skills","url":"https://github.com/mattpocock/skills","type":"third-party-repository","license":"MIT","allowed_use":"Adapt selected concepts with attribution; do not copy unrelated or in-progress Skills."}
 {"id":"ponytail","title":"Ponytail","type":"installed-plugin","license":"external","allowed_use":"Invoke when installed; do not vendor."}

@@ -22,6 +22,13 @@ for name in names:
         errors.append(f"missing skill: {name}")
     elif "[TODO" in path.read_text(encoding="utf-8"):
         errors.append(f"unresolved template: {path}")
+skill_dirs = sorted(path.name for path in (root / "skills").iterdir() if path.is_dir())
+if skill_dirs != [project["entry_skill"]]:
+    errors.append(f"expected one skill directory, found: {skill_dirs}")
+references = root / "skills" / project["entry_skill"] / "references"
+for name in project.get("references", []):
+    if not (references / name).is_file():
+        errors.append(f"missing reference: {name}")
 if errors:
     print("INVALID")
     print("\n".join(f"- {error}" for error in errors))
