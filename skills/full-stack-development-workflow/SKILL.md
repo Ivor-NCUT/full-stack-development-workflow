@@ -17,6 +17,7 @@ description: 公司级全栈开发职能入口。用于需求澄清、产品与�
 ## 按需读取
 
 - 写代码、设计模块、调试、测试或审查：读取 [references/engineering-principles.md](references/engineering-principles.md)。
+- 开始实现、重构或代码审查：读取 [references/ponytail-integration.md](references/ponytail-integration.md)，按需调用已安装的 Ponytail 能力。
 - 创建 Issue、分支、PR、合并或安排多个 Agent：读取 [references/github-collaboration.md](references/github-collaboration.md)。
 - 部署、巡检或排查 Zeabur：读取 [references/zeabur-delivery.md](references/zeabur-delivery.md)，再调用对应的已安装 `zeabur-*` Skill。
 
@@ -36,6 +37,7 @@ description: 公司级全栈开发职能入口。用于需求澄清、产品与�
 
 - Skill 生命周期任务由 `agent-skill-evolution-workflow` 主持；本入口提供工程实现与验证能力。
 - 飞书、Zeabur、GitHub、数据库和邮箱等平台能力继续由专用工具执行，本仓库只提供选择和安全工作流。
+- Ponytail 是可选的外部编码能力，不是第二个可发现入口；未安装时仍执行其能力阶梯，不静默安装或信任其 Hook。
 - 没有真实需求时不提前制造接口、专家、服务或部署。
 - 不可逆操作、资金、真实用户、生产数据和新增权限必须保留明确授权。
 
