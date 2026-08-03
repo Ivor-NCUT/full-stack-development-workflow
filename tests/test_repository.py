@@ -37,6 +37,18 @@ class RepositoryTest(unittest.TestCase):
         matt = next(item for item in sources if item["id"] == "mattpocock-skills")
         self.assertEqual(matt["license"], "MIT")
 
+    def test_ponytail_is_optional_external_capability(self) -> None:
+        sources = [
+            json.loads(line)
+            for line in (ROOT / "knowledge" / "sources.jsonl").read_text(encoding="utf-8").splitlines()
+        ]
+        ponytail = next(item for item in sources if item["id"] == "ponytail")
+        self.assertEqual(ponytail["license"], "MIT")
+        self.assertEqual(ponytail["type"], "third-party-plugin")
+        self.assertIn("do not vendor", ponytail["allowed_use"])
+        dependency = next(item for item in PROJECT["dependencies"] if item.get("skill") == "ponytail")
+        self.assertEqual(dependency["role"], "optional-on-demand-coding-capability")
+
 
 if __name__ == "__main__":
     unittest.main()

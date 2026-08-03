@@ -1,12 +1,13 @@
 {
   "project_name": "full-stack-development-workflow",
   "display_name": "全栈开发",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "license": "MIT",
   "entry_skill": "full-stack-development-workflow",
   "experts": [],
   "references": [
     "engineering-principles.md",
+    "ponytail-integration.md",
     "github-collaboration.md",
     "zeabur-delivery.md"
   ],
@@ -22,6 +23,6 @@
     {"skill": "multi-agent-github-workflow", "role": "integrated-github-collaboration"},
     {"skill": "zeabur-*", "role": "external-platform-tools"},
     {"repository": "mattpocock/skills", "license": "MIT", "role": "adapted-engineering-concepts"},
-    {"skill": "ponytail", "role": "minimal-implementation-principles"}
+    {"skill": "ponytail", "role": "optional-on-demand-coding-capability", "repository": "DietrichGebert/ponytail", "license": "MIT"}
   ]
 }

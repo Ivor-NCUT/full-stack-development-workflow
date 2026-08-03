@@ -7,7 +7,17 @@
   {
     "prompt": "按已确认的 Issue 实现这个功能并测试",
     "expected": "full-stack-development-workflow",
-    "references": ["engineering-principles.md"]
+    "references": ["engineering-principles.md", "ponytail-integration.md"]
+  },
+  {
+    "prompt": "重构这个模块并删除不必要的复杂度",
+    "expected": "full-stack-development-workflow",
+    "references": ["engineering-principles.md", "ponytail-integration.md"]
+  },
+  {
+    "prompt": "只读取这份技术方案并解释，不改代码",
+    "expected": "full-stack-development-workflow",
+    "references": []
   },
   {
     "prompt": "建立复现并修掉这个 Bug 的根因",
