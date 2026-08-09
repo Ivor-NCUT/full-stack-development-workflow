@@ -1,4 +1,4 @@
 interface:
   display_name: "全栈开发"
-  short_description: "统一处理需求、实现、调试、GitHub 协作与 Zeabur 生产交付"
-  default_prompt: "使用 $full-stack-development-workflow 端到端推进这项开发任务，并按需加载工程、GitHub 或 Zeabur 参考。"
+  short_description: "统一处理开发、安全审查、GitHub 协作与 Zeabur 生产交付"
+  default_prompt: "使用 $full-stack-development-workflow 端到端推进这项开发任务，并按需加载工程、安全、GitHub 或 Zeabur 参考。"

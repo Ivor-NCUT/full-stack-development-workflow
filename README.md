@@ -1,16 +1,17 @@
 # Full Stack Development Workflow
 
-公司级研发职能 Agent Skill。一个深入口贯穿需求、设计、实现、调试、审查、GitHub 协作和 Zeabur 交付；通用原则按需加载，不再拆成五个抢路由的阶段 Skill。
+公司级研发职能 Agent Skill。一个深入口贯穿需求、设计、实现、调试、代码与安全审查、GitHub 协作和 Zeabur 交付；通用原则按需加载，不再拆成五个抢路由的阶段 Skill。
 
 ## 结构
 
 - `skills/full-stack-development-workflow`：唯一可发现入口。
 - `skills/full-stack-development-workflow/references/engineering-principles.md`：工程、架构、测试、调试和审查。
 - `skills/full-stack-development-workflow/references/ponytail-integration.md`：Ponytail 的按需编码决策、降级与 Hook 审阅边界。
+- `skills/full-stack-development-workflow/references/security-review.md`：Codex Security 路由与高风险交付门禁。
 - `skills/full-stack-development-workflow/references/github-collaboration.md`：Issue、分支、PR 与多 Agent 协作。
 - `skills/full-stack-development-workflow/references/zeabur-delivery.md`：Zeabur 工具选择、部署和生产验收。
 
-Zeabur 的具体操作仍调用已安装的 `zeabur-*` Skill，本仓库不复制平台连接器。
+Codex Security 与 Zeabur 的具体操作仍调用已安装插件或平台 Skill，本仓库不复制外部实现。多阶段人工后台配置可按需路由到已安装的 `wizard`；普通一次性步骤直接给精确指令。
 
 ## 可选的 Ponytail 编码能力
 
