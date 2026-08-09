@@ -36,6 +36,7 @@ class RepositoryTest(unittest.TestCase):
         ]
         matt = next(item for item in sources if item["id"] == "mattpocock-skills")
         self.assertEqual(matt["license"], "MIT")
+        self.assertEqual(matt["commit"], "84fdeffd12f2ee307994d1eb6feb48173b6e0502")
 
     def test_ponytail_is_optional_external_capability(self) -> None:
         sources = [
@@ -48,6 +49,19 @@ class RepositoryTest(unittest.TestCase):
         self.assertIn("do not vendor", ponytail["allowed_use"])
         dependency = next(item for item in PROJECT["dependencies"] if item.get("skill") == "ponytail")
         self.assertEqual(dependency["role"], "optional-on-demand-coding-capability")
+
+    def test_security_redaction_and_wizard_are_routed_without_vendoring(self) -> None:
+        skill_root = ROOT / "skills" / PROJECT["entry_skill"]
+        security = (skill_root / "references" / "security-review.md").read_text(encoding="utf-8")
+        engineering = (skill_root / "references" / "engineering-principles.md").read_text(encoding="utf-8")
+        main = (skill_root / "SKILL.md").read_text(encoding="utf-8")
+        self.assertIn("codex-security:security-diff-scan", security)
+        self.assertIn("<REDACTED>", engineering)
+        self.assertIn("已安装的 `wizard`", main)
+        security_dependency = next(item for item in PROJECT["dependencies"] if item.get("plugin") == "codex-security")
+        wizard_dependency = next(item for item in PROJECT["dependencies"] if item.get("skill") == "wizard")
+        self.assertEqual(security_dependency["role"], "external-security-review-tools")
+        self.assertEqual(wizard_dependency["role"], "optional-human-setup-capability")
 
 
 if __name__ == "__main__":

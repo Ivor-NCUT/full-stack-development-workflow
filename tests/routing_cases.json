@@ -25,6 +25,21 @@
     "references": ["engineering-principles.md"]
   },
   {
+    "prompt": "用 Codex Security 扫描整个仓库并给我报告",
+    "expected": "full-stack-development-workflow",
+    "references": ["security-review.md"]
+  },
+  {
+    "prompt": "审查这个 PR 的认证和权限改动，修复高危漏洞后复扫",
+    "expected": "full-stack-development-workflow",
+    "references": ["engineering-principles.md", "security-review.md", "github-collaboration.md"]
+  },
+  {
+    "prompt": "给我一个可重复运行的向导，带我完成五个只能人工点击的后台配置阶段",
+    "expected": "full-stack-development-workflow",
+    "references": []
+  },
+  {
     "prompt": "按规格和工程标准审查这次修改",
     "expected": "full-stack-development-workflow",
     "references": ["engineering-principles.md"]

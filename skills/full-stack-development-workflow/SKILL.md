@@ -1,6 +1,6 @@
 ---
 name: full-stack-development-workflow
-description: 公司级全栈开发职能入口。用于需求澄清、产品与架构设计、代码实现、测试、Bug 与性能诊断、代码审查、GitHub Issue/分支/PR/多 Agent 协作，以及 Zeabur 部署和生产验收。一个 Skill 贯穿完整开发任务，按需读取工程原则、GitHub 协作或 Zeabur 交付参考；Skill 自身的创建与迭代仍由 agent-skill-evolution-workflow 主持。
+description: 公司级全栈开发职能入口。用于需求澄清、产品与架构设计、代码实现、测试、Bug 与性能诊断、代码与安全审查、GitHub Issue/分支/PR/多 Agent 协作，以及 Zeabur 部署和生产验收。一个 Skill 贯穿完整开发任务，按需读取工程、安全、GitHub 协作或 Zeabur 交付参考；Skill 自身的创建与迭代仍由 agent-skill-evolution-workflow 主持。
 ---
 
 # 全栈开发
@@ -18,10 +18,11 @@ description: 公司级全栈开发职能入口。用于需求澄清、产品与�
 
 - 写代码、设计模块、调试、测试或审查：读取 [references/engineering-principles.md](references/engineering-principles.md)。
 - 开始实现、重构或代码审查：读取 [references/ponytail-integration.md](references/ponytail-integration.md)，按需调用已安装的 Ponytail 能力。
+- 用户要求安全扫描、威胁建模、漏洞分诊或修复，或改动触及认证、授权、密钥、支付、文件上传、反序列化、命令执行等高风险边界：读取 [references/security-review.md](references/security-review.md)，再调用已安装的 `codex-security:*` Skill。
 - 创建 Issue、分支、PR、合并或安排多个 Agent：读取 [references/github-collaboration.md](references/github-collaboration.md)。
 - 部署、巡检或排查 Zeabur：读取 [references/zeabur-delivery.md](references/zeabur-delivery.md)，再调用对应的已安装 `zeabur-*` Skill。
 
-只读取当前任务需要的参考，不把三份参考机械串成固定流水线。
+只读取当前任务需要的参考，不把参考机械串成固定流水线。
 
 ## 统一执行循环
 
@@ -30,7 +31,7 @@ description: 公司级全栈开发职能入口。用于需求澄清、产品与�
 3. 需要拆分时按端到端行为建立纵向 Issue；一次只推进一个可验收切片。
 4. 优先复用现有代码、标准库、平台能力和已安装依赖，再写最少新代码。
 5. 非平凡逻辑留下能捕获真实失败的最小检查；Bug 先建立可变红的反馈环。
-6. 完成后分别检查“是否符合需求”和“是否符合工程标准”，同步受影响文档。
+6. 完成后分别检查“是否符合需求”和“是否符合工程标准”；高风险改动按安全参考完成 diff 扫描，再同步受影响文档。
 7. 涉及远端或生产时使用精确 ID、可恢复备份和回读证据；控制面报错先查状态再重试。
 
 ## 边界
@@ -38,6 +39,7 @@ description: 公司级全栈开发职能入口。用于需求澄清、产品与�
 - Skill 生命周期任务由 `agent-skill-evolution-workflow` 主持；本入口提供工程实现与验证能力。
 - 飞书、Zeabur、GitHub、数据库和邮箱等平台能力继续由专用工具执行，本仓库只提供选择和安全工作流。
 - Ponytail 是可选的外部编码能力，不是第二个可发现入口；未安装时仍执行其能力阶梯，不静默安装或信任其 Hook。
+- 只有连续多阶段且必须由人操作后台、录入凭据或执行切换时，才调用已安装的 `wizard`；一次性人工步骤直接给精确指令，用户已授权的可自动步骤继续执行。
 - 没有真实需求时不提前制造接口、专家、服务或部署。
 - 不可逆操作、资金、真实用户、生产数据和新增权限必须保留明确授权。
 
