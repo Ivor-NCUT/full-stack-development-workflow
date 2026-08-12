@@ -25,6 +25,16 @@
     "references": ["engineering-principles.md"]
   },
   {
+    "prompt": "从第一性原理重新检查这个反复失效的抓取方案，不要只修表面症状",
+    "expected": "full-stack-development-workflow",
+    "references": ["engineering-principles.md"]
+  },
+  {
+    "prompt": "功能已经跑通，现在开启对抗式审查，测试非法输入、断网、重试和并发",
+    "expected": "full-stack-development-workflow",
+    "references": ["engineering-principles.md"]
+  },
+  {
     "prompt": "用 Codex Security 扫描整个仓库并给我报告",
     "expected": "full-stack-development-workflow",
     "references": ["security-review.md"]

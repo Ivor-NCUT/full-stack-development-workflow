@@ -1,6 +1,6 @@
 # Full Stack Development Workflow
 
-公司级研发职能 Agent Skill。一个深入口贯穿需求、设计、实现、调试、代码与安全审查、GitHub 协作和 Zeabur 交付；通用原则按需加载，不再拆成五个抢路由的阶段 Skill。
+公司级研发职能 Agent Skill。一个深入口贯穿需求、第一性原理推导、设计、实现、调试、对抗式审查、代码与安全审查、GitHub 协作和 Zeabur 交付；通用原则按需加载，不再拆成五个抢路由的阶段 Skill。
 
 ## 结构
 
