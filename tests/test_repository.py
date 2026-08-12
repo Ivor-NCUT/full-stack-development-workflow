@@ -63,6 +63,21 @@ class RepositoryTest(unittest.TestCase):
         self.assertEqual(security_dependency["role"], "external-security-review-tools")
         self.assertEqual(wizard_dependency["role"], "optional-human-setup-capability")
 
+    def test_first_principles_and_adversarial_review_are_operational(self) -> None:
+        skill_root = ROOT / "skills" / PROJECT["entry_skill"]
+        main = (skill_root / "SKILL.md").read_text(encoding="utf-8")
+        engineering = (skill_root / "references" / "engineering-principles.md").read_text(encoding="utf-8")
+        cases = json.loads((ROOT / "tests" / "routing_cases.json").read_text(encoding="utf-8"))
+        prompts = "\n".join(item["prompt"] for item in cases)
+
+        self.assertIn("第一性原理", main)
+        self.assertIn("对抗式审查", main)
+        self.assertIn("共享机制允许它再次发生", engineering)
+        self.assertIn("部分成功", engineering)
+        self.assertIn("未经明确授权不为此启动多 Agent", main)
+        self.assertIn("第一性原理", prompts)
+        self.assertIn("对抗式审查", prompts)
+
 
 if __name__ == "__main__":
     unittest.main()
